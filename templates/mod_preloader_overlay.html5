@@ -1,0 +1,65 @@
+<?php
+$GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overlay.css|static';
+?>
+
+<script type="text/javascript">
+    /** Show preloader icon while loading the page **/
+    (function ($) {
+        "use strict";
+
+        // Set options here:
+        var preloader = {
+            "style": {
+                "width": "50px",
+                "height": "50px",
+                "border-width": "10px",
+                "border-left": "2px solid #e6e6e6",
+                "border-right": "2px solid #e6e6e6",
+                "border-top": "2px solid #e6e6e6",
+                "border-bottom": "2px solid #2acfff",
+                "background-color": "#333333"
+            },
+            "minDuration": 1000
+        };
+
+        $(document).ready(function () {
+
+            // Get time
+            var oTime =  new Date();
+            var timeDomReady = oTime.getTime();
+
+            // Add elements to DOM
+            $("<div/>", {
+                "id": "preloaderOverlay"
+            }).appendTo("body");
+
+            $("<div/>", {
+                "class": "preloader-icon"
+            }).appendTo("#preloaderOverlay");
+
+            // Add styles
+            var preloaderOverlay = $("#preloaderOverlay");
+            preloaderOverlay.find(".preloader-icon").css(preloader.style);
+
+            // Onload event
+            $(window).on("load", function () {
+                var delay = 0;
+                if((oTime.getTime() - timeDomReady) <= preloader["minDuration"])
+                {
+                    delay = preloader["minDuration"];
+                }
+                window.setTimeout(function () {
+                    // Add class to body
+                    $("body").addClass("loaded");
+
+                    // Fade out and remove icon from DOM
+                    preloaderOverlay.fadeOut();
+                    window.setTimeout(function(){
+                        preloaderOverlay.remove();
+                    }, 2000);
+
+                }, delay);
+            });
+        });
+    })(jQuery);
+</script>
