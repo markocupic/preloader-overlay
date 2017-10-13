@@ -3,7 +3,8 @@ $GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overla
 ?>
 
 <div id="preloaderOverlay">
-    <div class="preloader-icon"></div>
+    <i class="preloader-icon" aria-hidden="true"></i>
+    <div class="sr-only">Loading...</div>
 </div>
 
 <script type="text/javascript">

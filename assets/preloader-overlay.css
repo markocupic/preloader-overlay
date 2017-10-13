@@ -34,6 +34,19 @@
     animation: rotation 0.8s infinite linear;
 }
 
+#preloaderOverlay .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  border: 0;
+}
+
 @-webkit-keyframes rotation {
     0% {
         -webkit-transform: rotate(0deg);
