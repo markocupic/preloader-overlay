@@ -1,7 +1,7 @@
 /* ----- PRELOADER ----- styles defined in system/modules/preloader-icon/assets/preloader-icon.css*/
 
 #preloaderOverlay {
-    background-color: #333;
+    background-color: #fff;
     height: 100%;
     width: 100%;
     position: fixed;
