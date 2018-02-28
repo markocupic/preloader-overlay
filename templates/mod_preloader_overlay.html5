@@ -22,7 +22,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overla
                 "border-right": "2px solid #e6e6e6",
                 "border-top": "2px solid #e6e6e6",
                 "border-bottom": "2px solid #2acfff",
-                "background-color": "#333333"
+                //"background-color": "#333"
             },
             "minDuration": 200
         };
