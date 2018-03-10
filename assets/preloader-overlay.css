@@ -14,8 +14,8 @@
 
 #preloaderOverlay .preloader-icon {
     z-index: 9999;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -27,11 +27,11 @@
     border-top: 2px solid #e6e6e6;
     border-bottom: 2px solid #2acfff;
 
-    -webkit-animation: rotation 0.8s infinite linear;
-    -moz-animation: rotation 0.8s infinite linear;
-    -ms-animation: rotation 0.8s infinite linear;
-    -o-animation: rotation 0.8s infinite linear;
-    animation: rotation 0.8s infinite linear;
+    -webkit-animation: rotation 1.6s infinite linear;
+    -moz-animation: rotation 1.6s infinite linear;
+    -ms-animation: rotation 1.6s infinite linear;
+    -o-animation: rotation 1.6s infinite linear;
+    animation: rotation 1.6s infinite linear;
 }
 
 #preloaderOverlay .sr-only {
