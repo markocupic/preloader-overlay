@@ -19,8 +19,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
+    margin-left: -50px;
+    margin-top: -50px;
     border-radius: 50%;
     border-left: 2px solid #e6e6e6;
     border-right: 2px solid #e6e6e6;
