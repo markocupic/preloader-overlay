@@ -1,6 +1,6 @@
 {
   "name": "markocupic/preloader-overlay",
-  "description": "preloader overlay",
+  "description": "Cover body with an overlay (and icon) while page is loading",
   "keywords": [
     "contao",
     "preloader overlay"
