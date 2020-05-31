@@ -1,6 +1,6 @@
 <?php
 
-namespace Markocupic\CalendarEventBookingBundle\DependencyInjection;
+namespace Markocupic\MarkocupicPreloaderOverlayBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
  * Class MarkocupicPreloaderOverlayExtension
- * @package Markocupic\CalendarEventBookingBundle\DependencyInjection
+ * @package Markocupic\MarkocupicPreloaderOverlayBundle\DependencyInjection
  */
 class MarkocupicPreloaderOverlayExtension extends Extension
 {

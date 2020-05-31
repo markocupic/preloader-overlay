@@ -1,12 +1,12 @@
 <?php
 
-namespace Markocupic\Office365Bundle;
+namespace Markocupic\MarkocupicPreloaderOverlay;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Class MarkocupicPreloaderOverlayBundle
- * @package Markocupic\Office365Bundle
+ * @package Markocupic\MarkocupicPreloaderOverlay
  */
 class MarkocupicPreloaderOverlayBundle extends Bundle
 {

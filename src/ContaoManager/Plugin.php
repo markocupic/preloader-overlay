@@ -1,6 +1,6 @@
 <?php
 
-namespace Markocupic\PreloaderOverlayBundle\ContaoManager;
+namespace Markocupic\MarkocupicPreloaderOverlayBundle\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
@@ -8,7 +8,7 @@ use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 
 /**
  * Class Plugin
- * @package Markocupic\PreloaderOverlayBundle\ContaoManager
+ * @package Markocupic\MarkocupicPreloaderOverlayBundle\ContaoManager
  */
 class Plugin implements BundlePluginInterface
 {
@@ -20,7 +20,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('Markocupic\PrelaoderOverlayBundle\MarkocupicPrelaoderOverlayBundle')
+            BundleConfig::create('Markocupic\PreloaderOverlayBundle\MarkocupicPreloaderOverlayBundle')
                 ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
         ];
     }
