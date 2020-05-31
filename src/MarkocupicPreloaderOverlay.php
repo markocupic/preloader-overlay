@@ -1,12 +1,12 @@
 <?php
 
-namespace Markocupic\MarkocupicPreloaderOverlay;
+namespace Markocupic\PreloaderOverlay;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Class MarkocupicPreloaderOverlay
- * @package Markocupic\MarkocupicPreloaderOverlay
+ * @package Markocupic\PreloaderOverlay
  */
 class MarkocupicPreloaderOverlay extends Bundle
 {

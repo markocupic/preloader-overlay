@@ -1,6 +1,6 @@
 <?php
 
-namespace Markocupic\MarkocupicPreloaderOverlay\ContaoManager;
+namespace Markocupic\PreloaderOverlay\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
@@ -8,7 +8,7 @@ use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 
 /**
  * Class Plugin
- * @package Markocupic\MarkocupicPreloaderOverlay\ContaoManager
+ * @package Markocupic\PreloaderOverlay\ContaoManager
  */
 class Plugin implements BundlePluginInterface
 {
