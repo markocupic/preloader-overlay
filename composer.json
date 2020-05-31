@@ -30,9 +30,6 @@
       "src/Resources/contao/templates"
     ]
   },
-  "replace": {
-    "markocupic/preloader-overlay": "self.version"
-  },
   "extra": {
     "contao-manager-plugin": "Markocupic\\PreloaderOverlay\\ContaoManager\\Plugin"
   }
