@@ -26,12 +26,11 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
             "minDuration": 1000
         };
 
+        // Get time
+        var oTime = new Date();
+        var timeDomReady = oTime.getTime();
+
         $(document).ready(function () {
-
-            // Get time
-            var oTime = new Date();
-            var timeDomReady = oTime.getTime();
-
             var preloaderOverlay = $("#preloaderOverlay");
 
             // Append overlay to body
@@ -41,24 +40,23 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
             // Add styles
             preloaderOverlay.find(".preloader-icon").css(preloader.style);
 
-            // Onload event
-            $(window).on("load", function () {
-                var delay = 0;
-                if ((oTime.getTime() - timeDomReady) <= preloader["minDuration"]) {
-                    delay = preloader["minDuration"];
-                }
+            var delay = 0;
+            if ((oTime.getTime() - timeDomReady) <= preloader["minDuration"]) {
+                delay = preloader["minDuration"];
+            }
+
+            window.setTimeout(function () {
+                // Add class to body
+                $("body").addClass("loaded");
+
+                // Fade out and remove icon from DOM
+                preloaderOverlay.fadeOut();
                 window.setTimeout(function () {
-                    // Add class to body
-                    $("body").addClass("loaded");
+                    preloaderOverlay.remove();
+                }, 1500);
 
-                    // Fade out and remove icon from DOM
-                    preloaderOverlay.fadeOut();
-                    window.setTimeout(function () {
-                        preloaderOverlay.remove();
-                    }, 1500);
-
-                }, delay);
-            });
+            }, delay);
         });
+
     })(jQuery);
 </script>
