@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overlay.css|static';
+$GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay.css|static';
 ?>
 
 <div id="preloaderOverlay">
@@ -22,15 +22,14 @@ $GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overla
                 "border-right": "2px solid #e6e6e6",
                 "border-top": "2px solid #e6e6e6",
                 "border-bottom": "2px solid #2acfff",
-                //"background-color": "#333"
             },
-            "minDuration": 200
+            "minDuration": 5000
         };
 
         $(document).ready(function () {
 
             // Get time
-            var oTime =  new Date();
+            var oTime = new Date();
             var timeDomReady = oTime.getTime();
 
             var preloaderOverlay = $("#preloaderOverlay");
@@ -45,8 +44,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overla
             // Onload event
             $(window).on("load", function () {
                 var delay = 0;
-                if((oTime.getTime() - timeDomReady) <= preloader["minDuration"])
-                {
+                if ((oTime.getTime() - timeDomReady) <= preloader["minDuration"]) {
                     delay = preloader["minDuration"];
                 }
                 window.setTimeout(function () {
@@ -55,7 +53,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/preloader-overlay/assets/preloader-overla
 
                     // Fade out and remove icon from DOM
                     preloaderOverlay.fadeOut();
-                    window.setTimeout(function(){
+                    window.setTimeout(function () {
                         preloaderOverlay.remove();
                     }, 1500);
 

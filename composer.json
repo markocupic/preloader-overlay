@@ -1,14 +1,12 @@
 {
   "name": "markocupic/preloader-overlay",
-  "description": "Cover body with an overlay (and icon) while page is loading.",
+  "description": "preloader overlay",
   "keywords": [
     "contao",
-    "frontend",
-    "module",
-    "template"
+    "preloader overlay"
   ],
   "type": "contao-module",
-  "license": "LGPL-3.0+",
+  "license": "MIT",
   "authors": [
     {
       "name": "Marko Cupic",
@@ -22,24 +20,20 @@
     "source": "https://github.com/markocupic/preloader-overlay"
   },
   "require": {
-    "contao/core-bundle":"~3.2 || ~4.4",
-    "contao-community-alliance/composer-plugin":"~2.4 || ~3.0"
-  },
-  "replace": {
-  },
-  "conflict": {
-    "contao/core": "3.0.*"
+    "contao/core-bundle": "^4.5"
   },
   "autoload": {
-    "classmap": [
-      ""
+    "psr-4": {
+      "Markocupic\\PreloaderOverlayBundle\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "src/Resources/contao/templates"
     ]
   },
+  "replace": {
+    "markocupic/preloader-overlay": "self.version"
+  },
   "extra": {
-    "contao": {
-      "sources": {
-        "": "system/modules/preloader-overlay"
-      }
-    }
+    "contao-manager-plugin": "Markocupic\\PreloaderOverlayBundle\\ContaoManager\\Plugin"
   }
 }
