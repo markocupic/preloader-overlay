@@ -1,5 +1,3 @@
-# This package is abandoned, please use markocupic/preloader-overlay-bundle instead
-
 # Preloader overlay
 Cover body with an overlay (and icon) while page is loading. 
 
