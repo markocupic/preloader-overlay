@@ -1,6 +1,6 @@
 <?php
 
-namespace Markocupic\MarkocupicPreloaderOverlayBundle\DependencyInjection;
+namespace Markocupic\MarkocupicPreloaderOverlay\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
  * Class MarkocupicPreloaderOverlayExtension
- * @package Markocupic\MarkocupicPreloaderOverlayBundle\DependencyInjection
+ * @package Markocupic\MarkocupicPreloaderOverlay\DependencyInjection
  */
 class MarkocupicPreloaderOverlayExtension extends Extension
 {

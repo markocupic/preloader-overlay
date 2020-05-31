@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Markocupic\\PreloaderOverlayBundle\\": "src/"
+      "Markocupic\\PreloaderOverlay\\": "src/"
     },
     "exclude-from-classmap": [
       "src/Resources/contao/templates"
@@ -34,6 +34,6 @@
     "markocupic/preloader-overlay": "self.version"
   },
   "extra": {
-    "contao-manager-plugin": "Markocupic\\PreloaderOverlayBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Markocupic\\PreloaderOverlay\\ContaoManager\\Plugin"
   }
 }
