@@ -10,51 +10,77 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
 <!-- End preloader overlay (Do not touch this line) -->
 
 <script type="text/javascript">
-    /** Display preloader icon while loading the page **/
+
+    /** Display preloader overlay with spinner icon while loading the page **/
     (function ($) {
-        "use strict";
+        'use strict';
 
         // Set options here:
-        var preloader = {
-            "style": {
-                "width": "100px",
-                "height": "100px",
-                "border-width": "10px",
-                "border-left": "2px solid #e6e6e6",
-                "border-right": "2px solid #e6e6e6",
-                "border-top": "2px solid #e6e6e6",
-                "border-bottom": "2px solid #2acfff",
+        let options = {
+            overlay: {
+                maxDisplayTime: 30000,
+                minDisplayTime: 500,
+                fadeOutDuration: 400,
+                style: {
+                    // Overwrite styles here
+                    'z-index': '9998',
+                    'opacity': '1',
+                },
             },
-            "minDuration": 1000
+            preloaderIcon: {
+                style: {
+                    'width': '100px',
+                    'height': '100px',
+                    'border-width': '10px',
+                    'border-left': '2px solid #e6e6e6',
+                    'border-right': '2px solid #e6e6e6',
+                    'border-top': '2px solid #e6e6e6',
+                    'border-bottom': '2px solid #2acfff',
+                },
+            },
         };
 
+        let preloaderOverlay = $('#preloaderOverlay');
+
         // Get time
-        var oTime = new Date();
-        var timeDomReady = oTime.getTime();
+        let objTime = new Date();
+        let startTime = objTime.getTime();
 
-        $(document).ready(function () {
-            var preloaderOverlay = $("#preloaderOverlay");
+        // Add styles
+        preloaderOverlay.css(options.overlay.style);
+        preloaderOverlay.find('.preloader-icon').css(options.preloaderIcon.style);
 
-            // Add styles
-            preloaderOverlay.find(".preloader-icon").css(preloader.style);
+        // Fade out overlay if page is loaded
+        $(window).on('load', function () {
 
-            var delay = 0;
-            if ((oTime.getTime() - timeDomReady) <= preloader["minDuration"]) {
-                delay = preloader["minDuration"];
+            let delay = 0;
+            if ((objTime.getTime() - startTime) <= options.overlay.minDisplayTime && options.overlay.minDisplayTime > 0) {
+                delay = options.overlay.minDisplayTime;
             }
 
             window.setTimeout(function () {
                 // Add class to body
-                $("body").addClass("loaded");
+                $('body').addClass('loaded');
 
                 // Fade out and remove icon from DOM
-                preloaderOverlay.fadeOut();
-                window.setTimeout(function () {
-                    preloaderOverlay.remove();
-                }, 1500);
+                preloaderOverlay.fadeOut(options.overlay.fadeOutDuration, function () {
+                    $(this).remove();
+                });
 
             }, delay);
         });
+
+        // Fade out overlay after a predefined time limit
+        window.setTimeout(function () {
+            // Add class 'loaded' to the body tag
+            $('body').addClass('loaded');
+
+            // Fade out and remove overlay from DOM
+            preloaderOverlay.fadeOut(options.overlay.fadeOutDuration, function () {
+                $(this).remove();
+            });
+        }, options.overlay.maxDisplayTime);
+
 
     })(jQuery);
 </script>
