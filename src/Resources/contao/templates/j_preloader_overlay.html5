@@ -2,13 +2,15 @@
 $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay.css|static';
 ?>
 
+<!-- Start preloader overlay (Do not touch this line) -->
 <div id="preloaderOverlay">
     <i class="preloader-icon" aria-hidden="true"></i>
     <div class="sr-only">Loading...</div>
 </div>
+<!-- End preloader overlay (Do not touch this line) -->
 
 <script type="text/javascript">
-    /** Show preloader icon while loading the page **/
+    /** Display preloader icon while loading the page **/
     (function ($) {
         "use strict";
 
@@ -32,10 +34,6 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
 
         $(document).ready(function () {
             var preloaderOverlay = $("#preloaderOverlay");
-
-            // Append overlay to body
-            $("#preloaderOverlay").detach();
-            $("body").prepend(preloaderOverlay);
 
             // Add styles
             preloaderOverlay.find(".preloader-icon").css(preloader.style);
