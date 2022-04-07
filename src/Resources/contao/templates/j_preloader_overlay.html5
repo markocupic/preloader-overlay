@@ -19,12 +19,13 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
         let options = {
             overlay: {
                 maxDisplayTime: 30000,
-                minDisplayTime: 500,
+                minDisplayTime: 2000,
                 fadeOutDuration: 400,
                 style: {
                     // Overwrite styles here
                     'z-index': '9998',
                     'opacity': '1',
+                    'background-color': '#ffffff',
                 },
             },
             preloaderIcon: {
