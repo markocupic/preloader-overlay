@@ -4,8 +4,8 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
 
 <!-- Start preloader overlay (Do not touch this line) -->
 <div id="preloaderOverlay">
-    <i class="preloader-icon" aria-hidden="true"></i>
-    <div class="sr-only">Loading...</div>
+  <i class="preloader-icon" aria-hidden="true"></i>
+  <div class="sr-only">Loading...</div>
 </div>
 <!-- End preloader overlay (Do not touch this line) -->
 
@@ -80,7 +80,5 @@ $GLOBALS['TL_CSS'][] = 'bundles/markocupicpreloaderoverlay/css/preloader-overlay
                 $(this).remove();
             });
         }, options.overlay.maxDisplayTime);
-
-
     })(jQuery);
 </script>

@@ -1,5 +1,4 @@
 services:
-  # outputFrontendTemplate table hook
-  Markocupic\PreloaderOverlay\Listener\ContaoHooks\OutputFrontendTemplate:
-    tags:
-    - { name: contao.hook, hook: outputFrontendTemplate, method: onOutputFrontendTemplate, priority: 0 }
+    Markocupic\PreloaderOverlay\Listener\ContaoHooks\OutputFrontendTemplate:
+        tags:
+            - { name: contao.hook, hook: outputFrontendTemplate, method: onOutputFrontendTemplate, priority: 0 }
