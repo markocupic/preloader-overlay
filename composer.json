@@ -1,6 +1,6 @@
 {
   "name": "markocupic/preloader-overlay",
-  "description": "Cover body with an overlay (and icon) while page is loading",
+  "description": "Covers the body with an overlay (and icon) while your page is loading",
   "keywords": [
     "contao",
     "preloader overlay"
@@ -20,7 +20,7 @@
     "source": "https://github.com/markocupic/preloader-overlay"
   },
   "require": {
-    "contao/core-bundle": "^4.5"
+    "contao/core-bundle": "^4.5 || ^5.0"
   },
   "require-dev": {
     "contao/easy-coding-standard": "^5.0",
